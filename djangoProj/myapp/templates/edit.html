@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Teacher Form</title>
+  </head>
+  <body>
+    <h1>Update a Teacher</h1>
+
+    <form action="{% url 'update' key2.id %}" method="post">
+      {% csrf_token %}
+      <label for="name">First Name:</label>
+      <input
+        type="text"
+        id="fname"
+        name="fname"
+        value="{{key2.first_name}}"
+        required
+      />
+      <br /><br />
+
+      <label for="name">Last Name:</label>
+      <input
+        type="text"
+        id="lname"
+        name="lname"
+        value="{{key2.last_name}}"
+        required
+      />
+      <br /><br />
+
+      <label for="name">Email:</label>
+      <input
+        type="text"
+        id="email"
+        name="email"
+        value="{{key2.email}}"
+        required
+      />
+      <br /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
