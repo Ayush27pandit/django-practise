@@ -31,6 +31,12 @@
               <input type="submit" value="Edit" />
             </form>
           </td>
+          <td>
+            <form action="{% url 'deletedata' pk=i.id %}" method="post">
+              {% csrf_token %}
+              <input type="submit" value="Delete" />
+            </form>
+          </td>
         </tr>
         {%endfor%}
       </tbody>
